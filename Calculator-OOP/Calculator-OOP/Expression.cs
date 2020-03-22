@@ -91,6 +91,14 @@ namespace Calculator_OOP
         }
         public override double solve()
         {
+            if(y.solve() == 0)
+            {
+                if(x.solve() == 0)
+                {
+                    throw new Exception("0/0 division is undefined");
+                }
+                throw new Exception("Division by zero is not allowed");
+            }
             return x.solve() / y.solve();
         }
     }
@@ -114,6 +122,10 @@ namespace Calculator_OOP
         }
         public override double solve()
         {
+            if(x.solve() < 0)
+            {
+                throw new Exception("Square root of a negative number is not allowed");
+            } 
             return Math.Sqrt(x.solve());
         }
     }

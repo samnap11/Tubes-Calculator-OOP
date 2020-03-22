@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Samuel\\OneDrive - Institut Teknologi Bandung\\Documents\\Institut Teknologi Bandung\\Semester 4\\Object-Oriented Programming\\Tubes 1\\Calculator-OOP\\Calculator-OOP\\Calculator-OOP.csproj": {}
+    "C:\\Users\\Samuel\\OneDrive - Institut Teknologi Bandung\\Documents\\Institut Teknologi Bandung\\Semester 4\\Object-Oriented Programming\\Tubes 1\\Tubes-Calculator-OOP\\Calculator-OOP\\Calculator-OOP\\Calculator-OOP.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Samuel\\OneDrive - Institut Teknologi Bandung\\Documents\\Institut Teknologi Bandung\\Semester 4\\Object-Oriented Programming\\Tubes 1\\Calculator-OOP\\Calculator-OOP\\Calculator-OOP.csproj": {
+    "C:\\Users\\Samuel\\OneDrive - Institut Teknologi Bandung\\Documents\\Institut Teknologi Bandung\\Semester 4\\Object-Oriented Programming\\Tubes 1\\Tubes-Calculator-OOP\\Calculator-OOP\\Calculator-OOP\\Calculator-OOP.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Samuel\\OneDrive - Institut Teknologi Bandung\\Documents\\Institut Teknologi Bandung\\Semester 4\\Object-Oriented Programming\\Tubes 1\\Calculator-OOP\\Calculator-OOP\\Calculator-OOP.csproj",
+        "projectUniqueName": "C:\\Users\\Samuel\\OneDrive - Institut Teknologi Bandung\\Documents\\Institut Teknologi Bandung\\Semester 4\\Object-Oriented Programming\\Tubes 1\\Tubes-Calculator-OOP\\Calculator-OOP\\Calculator-OOP\\Calculator-OOP.csproj",
         "projectName": "Calculator-OOP",
-        "projectPath": "C:\\Users\\Samuel\\OneDrive - Institut Teknologi Bandung\\Documents\\Institut Teknologi Bandung\\Semester 4\\Object-Oriented Programming\\Tubes 1\\Calculator-OOP\\Calculator-OOP\\Calculator-OOP.csproj",
+        "projectPath": "C:\\Users\\Samuel\\OneDrive - Institut Teknologi Bandung\\Documents\\Institut Teknologi Bandung\\Semester 4\\Object-Oriented Programming\\Tubes 1\\Tubes-Calculator-OOP\\Calculator-OOP\\Calculator-OOP\\Calculator-OOP.csproj",
         "packagesPath": "C:\\Users\\Samuel\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Samuel\\OneDrive - Institut Teknologi Bandung\\Documents\\Institut Teknologi Bandung\\Semester 4\\Object-Oriented Programming\\Tubes 1\\Calculator-OOP\\Calculator-OOP\\obj\\",
+        "outputPath": "C:\\Users\\Samuel\\OneDrive - Institut Teknologi Bandung\\Documents\\Institut Teknologi Bandung\\Semester 4\\Object-Oriented Programming\\Tubes 1\\Tubes-Calculator-OOP\\Calculator-OOP\\Calculator-OOP\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Samuel\\AppData\\Roaming\\NuGet\\NuGet.Config",

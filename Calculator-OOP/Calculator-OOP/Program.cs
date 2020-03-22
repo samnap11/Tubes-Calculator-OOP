@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Text;
+using System.Globalization;
 using System.IO;
 using System.Collections.Generic;
 
@@ -142,13 +143,14 @@ namespace Calculator_OOP
     {
         Number,
         Operator,
-        Dot
+        Dot,
+        End
     }
     class Parser
     {
-        Queue<Expression> q;
-        Queue<char> operatorsq;
-        HashSet<char> listOfOperators = new HashSet<char>()
+        static Queue<Expression> q;
+        static Queue<char> operatorsq;
+        static HashSet<char> listOfOperators = new HashSet<char>()
         {
             '+',
             '-',
@@ -195,18 +197,31 @@ namespace Calculator_OOP
                 if(categ == TokenCategory.Number)
                 {
                     token.Append(c);
+                    Console.WriteLine("A");
                     int next = text.Peek();
-                    TokenCategory nextType = type((char)next);
+                    TokenCategory nextType;
+                    if(next != -1)
+                    {
+                        nextType = type((char)next);
+                    }
+                    else
+                    {
+                        nextType = TokenCategory.End;
+                    }
                     if(nextType == TokenCategory.Operator)
                     {
-                        q.Enqueue(new TerminalExpression(Convert.ToDouble(token.ToString())));
+                        Console.WriteLine("1");
+                        q.Enqueue(new TerminalExpression(Convert.ToDouble(token.ToString(), CultureInfo.InvariantCulture)));
+                        Console.WriteLine("Enqueued");
                         dotCounter = 0;
                         unaryCounter = 0;
                         token.Clear();
                     }
-                    else if(next == -1)
+                    else if(nextType == TokenCategory.End)
                     {
-                        q.Enqueue(new TerminalExpression(Convert.ToDouble(token.ToString())));
+                        Console.WriteLine("2");
+                        q.Enqueue(new TerminalExpression(Convert.ToDouble(token.ToString(), CultureInfo.InvariantCulture)));
+                        Console.WriteLine("Enqueued");
                         dotCounter = 0;
                         unaryCounter = 0;
                         token.Clear();
@@ -220,6 +235,7 @@ namespace Calculator_OOP
                     if(prevNumber)
                     {
                         operatorsq.Enqueue(c);
+                        Console.WriteLine("Op Enqueued");
                         if(q.Count >= 2)
                         {
                             Expression exp1 = q.Dequeue();
@@ -282,6 +298,14 @@ namespace Calculator_OOP
                         throw new Exception("Illegal use of dot as decimal separator");
                     }
                 }
+                foreach(var i in q)
+                {
+                    Console.WriteLine(i);
+                }
+                foreach(var j in operatorsq)
+                {
+                    Console.WriteLine(j);
+                }
             }
             if(q.Count == 2 && operatorsq.Count == 1)
             {
@@ -316,10 +340,12 @@ namespace Calculator_OOP
     }
     public class MainProgram
     {
+        static List<TokenCategory> li;
         public static void Main(string[] args)
         {
             try
             {
+                li = new List<TokenCategory>();
                 var input = Console.ReadLine();
                 using (var read = new StringReader(input))
                 {
@@ -334,18 +360,18 @@ namespace Calculator_OOP
             }
             //int current;
             //var input = Console.ReadLine();
+            //li = new List<TokenCategory>();
+            //var p = new Parser();
             //using (var read = new StringReader(input))
             //{
-            //    while((current = read.Read()) != -1)
+            //    while ((current = read.Read()) != -1)
             //    {
-            //        if(char.IsDigit((char)current))
-            //        {
-            //            Console.WriteLine("Ini digit");
-            //        }
-            //        else
-            //        {
-            //            Console.WriteLine("Ini bukan digit");
-            //        }
+            //        var ch = (char)current;
+            //        li.Add(p.type(ch));
+            //    }
+            //    foreach(var i in li)
+            //    {
+            //        Console.WriteLine(i);
             //    }
             //}
         }

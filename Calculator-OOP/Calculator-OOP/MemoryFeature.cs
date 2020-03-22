@@ -20,6 +20,10 @@ namespace Calculator_OOP
         }
         public double Copy()
         {
+            if(q.Count == 0)
+            {
+                throw new Exception("Queue is empty");
+            }
             double ret;
             ret = q.Dequeue();
             q.Enqueue(ret);
